@@ -7,13 +7,30 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title><%= current_page.data.title || "Welcome" %> | James Gosling Photography</title>
 
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag  "all" %>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "style" %>
+    <%= javascript_include_tag  "app" %>
   </head>
 
-  <body class="<%= page_classes %>">
-    <%= yield %>
+  <body class="<%= page_classes %> u-flex">
+    <header class="site-header c-plane u-island">
+      <h1 class="site-title"><a href="/">James Gosling Photography</a></h1>
+      <h2 class="site-info">Commercial photography Cheshire | Manchester | London &copy; James Gosling <%= Time.now.year %></h2>
+    </header>
+
+    <nav class="site-nav c-plane u-island">
+      <ul class="o-nav">
+        <li><a href="/people.html">People</a></li>
+        <li><a href="/spaces.html">Spaces</a></li>
+        <li><a href="/objects.html">Objects</a></li>
+        <li><a href="/contact.html">Info &amp; Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="site-content">
+      <%= yield %>
+    </main>
   </body>
 </html>
