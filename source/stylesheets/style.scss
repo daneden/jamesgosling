@@ -23,10 +23,7 @@ $breakpoint-md: 900px;
 
   li {
     display: inline-block;
-
-    + li {
-      margin-left: $baseline;
-    }
+    margin-right: $baseline;
   }
 }
 
