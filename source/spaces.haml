@@ -1,0 +1,8 @@
+%h1.u-country.u-font-center.u-trim
+  Spaces
+
+.gallery
+  - data.photos.spaces.each_with_index do |photo, a|
+    - for i in 1..photo.num.to_i
+      .gallery__photo.gallery__photo--spaces
+        %img{:src => "/images/spaces/#{photo.tag}/#{i.to_s.rjust(3, '0')}.jpg"}

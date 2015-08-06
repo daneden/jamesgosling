@@ -1,0 +1,21 @@
+people:
+  - tag: "bwr"
+    num: 14
+  - tag: "cr"
+    num: 14
+  - tag: "por"
+    num: 10
+objects:
+  - tag: "dark"
+    num: 9
+  - tag: "light"
+    num: 6
+spaces:
+  - tag: "aci"
+    num: 14
+  - tag: "ex"
+    num: 11
+  - tag: "umb"
+    num: 10
+  - tag: "vi"
+    num: 13
