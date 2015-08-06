@@ -47,7 +47,9 @@
 #   end
 # end
 
-activate :autoprefixer
+activate :autoprefixer do |config|
+  config.browsers = ['last 3 versions', 'Explorer >= 9']
+end
 
 set :css_dir, 'stylesheets'
 
