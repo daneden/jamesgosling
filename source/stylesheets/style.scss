@@ -37,6 +37,14 @@ $breakpoint-md: 900px;
   z-index: 1;
 }
 
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .c-plane {
+    background-color: rgba(255,255,255,.75);
+    -webkit-backdrop-filter: blur(15px) saturate(120%);
+    backdrop-filter: blur(15px) saturate(120%);
+  }
+}
+
 .kenburns {
   position: absolute;
   top: 0;
@@ -56,7 +64,7 @@ $breakpoint-md: 900px;
   }
 
   &--home #{&}__img {
-    $anim-duration: 12s;
+    $anim-duration: 20s;
     animation: $anim-duration infinite kenburns-home;
 
     @at-root {
@@ -186,6 +194,27 @@ body {
 
 .site-header {
   order: 3;
+}
+
+@media (min-width: $breakpoint-md) {
+  body {
+    padding: ($baseline*3) 0;
+  }
+
+  .site-header,
+  .site-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  .site-nav {
+    top: 0;
+  }
+
+  .site-header {
+    bottom: 0;
+  }
 }
 
 // $NAV
